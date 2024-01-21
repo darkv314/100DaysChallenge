@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Tu nombre" />
+        <meta name="description" content="Descripcion del proyecto" />
+        <!-- Biblioteca de íconos Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Archivo de estilos -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <script
+            src="https://kit.fontawesome.com/e58bc76219.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Product Info</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Tu nombre">
-    <meta name="description" content="Descripcion del proyecto">
-    <!-- Biblioteca de íconos Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Archivo reset Normalize -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Archivo de estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Product Info</title>
-</head>
-
-<body>
-
-
-
-</body>
-
+    <body>
+        <div class="card">
+            <section class="card-img">
+                <img src="./images/headphone.png" alt="Razer Kraken Kitty" />
+            </section>
+            <section class="content">
+                <section class="info">
+                    <section class="main-info">
+                        <span class="tag"> Free shipping </span>
+                        <h1 class="title">
+                            Razer Kraken Kitty Edt Gaming Headset Quartz
+                        </h1>
+                    </section>
+                    <section class="price">
+                        <span class="price__old"> 1 599,-</span>
+                        <span class="price__current">799,-</span>
+                        <p>
+                            The offer is valid until April 3 or as long as
+                            stocks lasts!
+                        </p>
+                    </section>
+                </section>
+                <section class="buttons">
+                    <button class="add-to-cart-primary">Add to cart</button>
+                    <span class="units"> 50+ pcs. in stock </span>
+                    <div class="actions">
+                        <button>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            Add to cart
+                        </button>
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                            Add to wishlist
+                        </button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </body>
 </html>
