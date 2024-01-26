@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Nombre del autor" />
+        <meta name="description" content="Descripcion del proyecto" />
+        <!-- Biblioteca de íconos Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Archivo de estilos -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Analytics</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nombre del autor">
-    <meta name="description" content="Descripcion del proyecto">
-    <!-- Biblioteca de íconos Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Archivo reset Normalize -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Archivo de estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Analytics</title>
-</head>
+    <body>
+        <div class="card">
+            <section class="card-info">
+                <h1>Traffic source types</h1>
+                <p>Views • Last 28 days</p>
+            </section>
+            <section class="graphs">
+                <div class="doughnut-chart">
+                    <span class="shadow">
+                        <canvas id="doughnut-chart-shadow"></canvas>
+                    </span>
+                    <span class="doughnut">
+                        <canvas id="doughnut-chart"></canvas>
+                    </span>
+                    <p>
+                        Traffic <br />
+                        sources
+                    </p>
+                </div>
+                <div class="percentages">
+                    <section id="bar"></section>
+                    <section id="numbers"></section>
+                    <!-- <a class="more" href="">See more</a> -->
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<body>
-
-
-</body>
-
+    <script src="js/app.js" defer></script>
 </html>

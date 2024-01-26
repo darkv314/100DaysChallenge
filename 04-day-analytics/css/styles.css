@@ -6,43 +6,174 @@ Tabla de contenidos:
 3. Estilos generales ..... 32
 -------------------- */
 
-
 /* ----- Fuente ----- */
-@import url("https://fonts.googleapis.com/css?family=Merryweather&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
-
-
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 /* ----- Variables ----- */
 * {
-	--title-font-family: 'Merryweather', sans-serif;
-	--body-font-family: 'Poppins', sans-serif;
+    --title-font-family: "Merriweather", serif;
+    --body-font-family: "Poppins", sans-serif;
 
-	--body-bg-color: #D2DDF6;
-	--card-bg-color: #F6F9FF;
-	--text-color: #12163C;
+    --body-bg-color: #d2ddf6;
+    --card-bg-color: #f6f9ff;
+    --text-color: #12163c;
 
-	--blue-color-1: #96B3FF;
-	--blue-color-2: #6792FF;
-	--blue-color-3: #4473EA;
-	--blue-color-4: #1A52E1;
+    --blue-color-1: #96b3ff;
+    --blue-color-2: #6792ff;
+    --blue-color-3: #4473ea;
+    --blue-color-4: #1a52e1;
 
-	--fs-text: 1rem;
-	--lh-text: 22px;
+    --fs-text: 1rem;
+    --lh-text: 22px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 /* ----------------------------- */
 /* ----- Estilos generales ----- */
 /* ----------------------------- */
 body {
-	font-family: var(--primary-font-family);
-	background-color: var(--body-bg-color);
-	color: var(--text-color);
-	font-size: var(--fs-text);
-	line-height: var(--lh-text);
+    font-family: var(--body-font-family);
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    font-size: var(--fs-text);
+    line-height: var(--lh-text);
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    padding: 4rem;
 
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+    @media (max-width: 750px) {
+        padding: 2rem;
+    }
+
+    @media (max-width: 300px) {
+        padding: 2rem 1rem;
+    }
 }
 
+.card {
+    /* max-width: 400px; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--card-bg-color);
+    padding: 4rem;
+    @media (max-width: 450px) {
+        padding: 2rem;
+    }
+    border-radius: 2rem;
+    box-shadow: 10px 6px 0px 4px #e3eefe;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    h1 {
+        font-family: var(--title-font-family);
+        font-weight: 900;
+    }
+}
+
+.graphs {
+    display: flex;
+    gap: 3rem;
+
+    @media (max-width: 775px) {
+        flex-direction: column;
+    }
+}
+
+.doughnut-chart {
+    display: grid;
+    place-items: center;
+    position: relative;
+    min-width: 175px;
+    min-height: 175px;
+
+    p {
+        text-align: center;
+        position: absolute;
+        top: 43%;
+        font-family: var(--body-font-family);
+        font-weight: 600;
+    }
+}
+
+.shadow,
+.doughnut {
+    max-width: 175px;
+    min-width: 175px;
+}
+
+.shadow {
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0.4rem;
+}
+
+.doughnut {
+    width: 100%;
+    position: absolute;
+}
+
+.percentages {
+    display: grid;
+    max-width: 400px;
+    overflow-x: auto;
+    gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+
+    #numbers {
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        gap: 0.5rem;
+        /* align-items: center; */
+
+        p {
+            font-weight: 600;
+            font-size: small;
+        }
+    }
+}
+
+#bar {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.bar-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    width: 300px;
+    @media (max-width: 775px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0.25rem;
+        width: 100px;
+    }
+}
+
+#numbers {
+    align-items: center;
+    p {
+        font-weight: 900;
+    }
+}
+
+.percent {
+    height: 5px;
+    border-radius: 1rem;
+    justify-self: end;
+
+    @media (max-width: 775px) {
+        justify-self: start;
+    }
+}
