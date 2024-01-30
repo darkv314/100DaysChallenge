@@ -122,22 +122,31 @@ body {
 }
 
 .percentages {
-    display: grid;
-    max-width: 400px;
-    overflow-x: auto;
-    gap: 0.5rem;
-    grid-template-columns: 1fr auto;
-
-    #numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .data {
         display: grid;
-        grid-template-rows: repeat(4, auto);
+        max-width: 400px;
+        overflow-x: auto;
         gap: 0.5rem;
-        /* align-items: center; */
+        grid-template-columns: 1fr auto;
+        #numbers {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            gap: 0.5rem;
+            /* align-items: center; */
 
-        p {
-            font-weight: 600;
-            font-size: small;
+            p {
+                font-weight: 600;
+                font-size: small;
+            }
         }
+    }
+
+    a {
+        align-self: flex-end;
     }
 }
 
