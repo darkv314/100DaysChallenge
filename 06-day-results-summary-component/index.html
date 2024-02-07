@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Nombre del autor" />
+        <meta name="description" content="Descripcion del proyecto" />
+        <!-- Biblioteca de íconos Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Archivo de estilos -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="./images/favicon-32x32.png"
+            type="image/x-icon"
+        />
+        <title>Results Summary Component</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Nombre del autor">
-    <meta name="description" content="Descripcion del proyecto">
-    <!-- Biblioteca de íconos Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Archivo reset Normalize -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Archivo de estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
-    <title>Results Summary Component</title>
-</head>
-
-<body>
-    <!-- Marcado HTML -->
-</body>
-
+    <body>
+        <div class="card">
+            <section class="grades">
+                <h2>Your Result</h2>
+                <div class="circle-grade">
+                    <h2>76</h2>
+                    <p>of 100</p>
+                </div>
+                <article>
+                    <h3>Great</h3>
+                    <p>
+                        You scored higher than 65% of the people who have taken
+                        these tests.
+                    </p>
+                </article>
+            </section>
+            <section class="summary">
+                <h1>Summary</h1>
+                <section class="fields">
+                    <div class="field">
+                        <span class="icon">
+                            <img
+                                src="./images/icon-reaction.svg"
+                                alt="Reaction"
+                            />
+                            Reaction
+                        </span>
+                        <span class="result">
+                            80&ensp;
+                            <span> / 100</span>
+                        </span>
+                    </div>
+                    <div class="field">
+                        <span class="icon">
+                            <img
+                                src="./images/icon-memory.svg"
+                                alt="Reaction"
+                            />
+                            Memory
+                        </span>
+                        <span class="result">
+                            92&ensp;
+                            <span> / 100</span>
+                        </span>
+                    </div>
+                    <div class="field">
+                        <span class="icon">
+                            <img
+                                src="./images/icon-verbal.svg"
+                                alt="Reaction"
+                            />
+                            Verbal
+                        </span>
+                        <span class="result">
+                            61&ensp;
+                            <span> / 100</span>
+                        </span>
+                    </div>
+                    <div class="field">
+                        <span class="icon">
+                            <img
+                                src="./images/icon-visual.svg"
+                                alt="Reaction"
+                            />
+                            Visual
+                        </span>
+                        <span class="result">
+                            72&ensp;
+                            <span>/ 100</span>
+                        </span>
+                    </div>
+                </section>
+                <button class="continue">Continue</button>
+            </section>
+        </div>
+    </body>
 </html>
